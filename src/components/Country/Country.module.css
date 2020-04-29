@@ -1,7 +1,15 @@
 .formControl {
 	width: 30%;
+	/* background-color: #777; */
+
 	margin-bottom: 30px !important;
 }
+
+.chosen{
+	color: #ddd !important;
+	font-weight: bolder !important;
+}
+
 @media only screen and (max-width: 770px) {
 	.formControl {
 		width: 100%;

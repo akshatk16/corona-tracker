@@ -15,24 +15,49 @@ const Graph = ({ data: { confirmed, recovered, deaths }, country }) => {
 	}, [])
 
 	const LineGraph = (
-	  dailyData[0] ? (
-	    <Line data = {{
-		  labels: dailyData.map(({ date }) => date),
-		  datasets: [{
-		    data: dailyData.map((data) => data.confirmed),
-		    label: 'Infected',
-		    borderColor: 'rgba(255, 150, 0, 0.9)',
-		    backgroundColor: 'rgba(255, 170, 0, 0.4)',
-		    fill: true,
-		  }, {
-		    data: dailyData.map((data) => data.deaths),
-		    label: 'Deaths',
-		    borderColor: 'red',
-		    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-		    fill: true,
-		  },
-		  ],
-		}}
+	 	dailyData[0] ? (
+	    	<Line data = {{
+		  	labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString("en-US", {month: 'short', day: 'numeric'})),
+		  	datasets: [{
+			    data: dailyData.map((data) => data.confirmed),
+			    label: 'Infected',
+			    borderColor: 'rgba(255, 150, 0, 0.9)',
+			    color: 'white',
+			    backgroundColor: 'rgba(255, 170, 0, 0.4)',
+			    fill: true,
+		  	}, {
+			    data: dailyData.map((data) => data.deaths),
+			    label: 'Deaths',
+			    borderColor: 'red',
+			    backgroundColor: 'rgba(255, 0, 0, 0.5)',
+			    fill: true,
+			},
+		],
+	}} options = {{
+		legend: {
+			display: true,
+			labels: {
+					    fontColor: "white",
+					    fontSize: 18
+					}
+				  },
+				  scales: {
+					yAxes: [{
+					    ticks: {
+						  fontColor: "white",
+						  fontSize: 20,
+						  beginAtZero: true
+					    }
+					}],
+					xAxes: [{
+					    ticks: {
+						  fontColor: "white",
+						  fontSize: 18,
+						  beginAtZero: true
+					    }
+					}]
+				}
+	}}
 	    />
 	  ) : null
 	);
@@ -53,8 +78,34 @@ const Graph = ({ data: { confirmed, recovered, deaths }, country }) => {
 					}]
 				}}
 				options={{
-					legend: {display: false},
-					title: {display: true, text: `Covid Numbers from ${country}`}
+					legend: {
+						display: false,
+						labels: {
+						                fontColor: "white",
+						                fontSize: 18
+						            }
+						        },
+						        scales: {
+						            yAxes: [{
+						                ticks: {
+						                    fontColor: "white",
+						                    fontSize: 20,
+						                    beginAtZero: true
+						                }
+						            }],
+						            xAxes: [{
+						                ticks: {
+						                    fontColor: "white",
+						                    fontSize: 20,
+						                    beginAtZero: true
+						                }
+						            }]
+							},
+					title: {
+						display: true,
+						text: `Covid Numbers from ${country}`,
+						fontColor: '#ddd',
+						fontSize: 24}
 				}} />
 		) : null
 	)
