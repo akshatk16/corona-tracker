@@ -38,21 +38,21 @@ const Graph = ({ data: { confirmed, recovered, deaths }, country }) => {
 			display: true,
 			labels: {
 					    fontColor: "white",
-					    fontSize: 18
+					    fontSize: 14
 					}
 				  },
 				  scales: {
 					yAxes: [{
 					    ticks: {
 						  fontColor: "white",
-						  fontSize: 20,
+						  fontSize: 10,
 						  beginAtZero: true
 					    }
 					}],
 					xAxes: [{
 					    ticks: {
 						  fontColor: "white",
-						  fontSize: 18,
+						  fontSize: 12,
 						  beginAtZero: true
 					    }
 					}]
@@ -89,14 +89,14 @@ const Graph = ({ data: { confirmed, recovered, deaths }, country }) => {
 						            yAxes: [{
 						                ticks: {
 						                    fontColor: "white",
-						                    fontSize: 20,
+						                    fontSize: 12,
 						                    beginAtZero: true
 						                }
 						            }],
 						            xAxes: [{
 						                ticks: {
 						                    fontColor: "white",
-						                    fontSize: 20,
+						                    fontSize: 16,
 						                    beginAtZero: true
 						                }
 						            }]

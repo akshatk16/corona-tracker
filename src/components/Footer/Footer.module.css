@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	background-color: #0c0032;
+	background-color: #111;
 	padding: 10px;
 	color: whitesmoke;
 
@@ -18,20 +18,20 @@
 	text-decoration: underline;
 
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 813px) {
   .container {
 	margin-top: 70px;
   	display: flex;
   	justify-content: center;
   	width: 100%;
-  	background-color: #eee;
+  	background-color: #282828;
   	padding: 10px;
-  	color: black;
-	font-size: 10px;
+  	color: white;
+	font-size: 12px;
 	}
 	.github {
 		margin-left: 5px;
 		text-decoration: none;
-		color: black;
+		color: white;
 	}
 }
