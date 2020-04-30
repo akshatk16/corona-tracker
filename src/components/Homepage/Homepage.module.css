@@ -1,20 +1,19 @@
 .container {
+	margin-top: 70px;
 	display: flex;
-	justify-content: center;
 	width: 100%;
-	background-color: #111;
 	padding: 10px;
 	color: whitesmoke;
 
 }
 
-.github {
-	margin-left: 5px;
+.homepage {
+	margin-left: 10px;
 	text-decoration: none;
 	color: whitesmoke;
 }
 
-.github:hover {
+.homepage:hover {
 	text-decoration: underline;
 
 }
@@ -29,7 +28,7 @@
   	color: white;
 	font-size: 12px;
 	}
-	.github {
+	.homepage {
 		margin-left: 5px;
 		text-decoration: none;
 		color: white;

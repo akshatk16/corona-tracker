@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, Country, Graph, Footer } from './components';
+import { Cards, Country, Graph, Footer, Homepage } from './components';
 import { getData } from './api/';
 import styles from './App.module.css';
 import logoImage from './images/logo.png'
@@ -29,6 +29,7 @@ class App extends React.Component {
 				<Cards data={ data } />
 				<Country changeCountry={this.changeCountry}  />
 				<Graph data={ data } country={ country }/>
+				<Homepage />
 				<Footer />
 			</div>
 		)
